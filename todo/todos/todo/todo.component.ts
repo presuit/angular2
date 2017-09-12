@@ -13,10 +13,6 @@ import { Todo } from "../../share/todo.model";
       color: darkgray;
       background-color: white;
     }
-    :host:checked {
-      background-color: red;
-      transition: all 1s;
-    }
     input {
       position: relative;
     }

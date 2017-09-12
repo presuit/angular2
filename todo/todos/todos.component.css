@@ -18,8 +18,10 @@ h1 {
 app-todo, app-add-todo {
     border-bottom: 1px solid #cccccc;
 }
-app-todo > input:checked {
+
+app-todo:hover {
+    background-color: #068587;
     color: black;
-    background-color: #E13E3E;
     transition: all 1s;
+    opacity: 0.9;
 }

@@ -1,6 +1,6 @@
 <div class="title">
   <h1>나의 하루</h1>
-  <h2>5월 25일</h2>
+  <h2>{{today | date:'M월 d일'}}</h2>
 </div>
 <div>
   <div *ngFor="let todo of todos" (click)="toggleTodo(todo)">
@@ -10,3 +10,31 @@
 <div>
   <app-add-todo (onTodoAdded)="addTodo($event)"></app-add-todo>
 </div>
+
+<h3>Raised Buttons</h3>
+<div class="button-row">
+  <button md-raised-button>Basic</button>
+  <button md-raised-button color="primary">Primary</button>
+  <button md-raised-button color="accent">Accent</button>
+  <button md-raised-button color="warn">Warn</button>
+  <button md-raised-button disabled>Disabled</button>
+  <a md-raised-button routerLink=".">Link</a>
+</div>
+
+<button md-icon-button [mdMenuTriggerFor]="menu">
+  <md-icon>more_vert</md-icon>
+</button>
+<md-menu #menu="mdMenu">
+  <button md-menu-item>
+    <md-icon>dialpad</md-icon>
+    <span>Redial</span>
+  </button>
+  <button md-menu-item disabled>
+    <md-icon>voicemail</md-icon>
+    <span>Check voicemail</span>
+  </button>
+  <button md-menu-item>
+    <md-icon>notifications_off</md-icon>
+    <span>Disable alerts</span>
+  </button>
+</md-menu>

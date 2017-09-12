@@ -10,6 +10,7 @@ export class TodosComponent implements OnInit {
 
   newText = '';
   todos: Todo[];//객체에 들어있는 메타데이터를 가지는 배열이 todos다
+  today: Date = new Date();
 
   constructor() {
     this.todos = [
